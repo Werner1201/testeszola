@@ -32,10 +32,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let start = caminho.slice(0, endereco)
     let linkpt
     if(lang !== "pt"){
-        linkpt = start + `/${lang}` + end;
+        if(end[1].localeCompare('e' || 'f') == 0){
+            linkpt = start + `/${lang}` + end.slice(3);
+        }else{
+            linkpt = start + `/${lang}` + end;
+        }
     }
     else{
-        if(end[1] === 'e' || 'f'){
+        if(end[1].localeCompare('e' || 'f') == 0){
             linkpt = start + "" + end.slice(3);
         }else{
             linkpt = start + "" + end;
