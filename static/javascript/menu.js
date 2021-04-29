@@ -35,7 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
         linkpt = start + `/${lang}` + end;
     }
     else{
-        linkpt = start + "" + end;
+        if(end[1] === 'e' || 'f'){
+            linkpt = start + "" + end.slice(3);
+        }else{
+            linkpt = start + "" + end;
+        }
     }
     location.href = linkpt;
   }
