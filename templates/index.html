@@ -5,4 +5,38 @@
   TESTE
 </h1>
 <p>Click <a href="/blog/">here</a> to see my posts.</p>
+<div id="carousel-demo" class="carousel">
+  <div class="item-1">
+    <!-- Slide Content -->
+    <div class="box">
+      <p>AAAAAAAAAAAAAA</p>
+    </div>
+  </div>
+  <div class="item-2">
+    <!-- Slide Content -->
+    <div class="box">
+      <p>BBBBBBBBBBB</p>
+    </div>
+  </div>
+  <div class="item-3">
+    <!-- Slide Content -->
+    <div class="box">
+      <p>CCCCCCCCCCCCC</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  bulmaCarousel.attach('#carousel-demo', {
+      initialSlide: 0,
+			slidesToScroll: 1,
+			slidesToShow: 1,
+      navigationKeys: true,
+      pagination: true,
+      autoplay: true, 
+      loop: true,
+      duration: 800,
+      autoplaySpeed: 4000
+		});
+</script>
 {% endblock content %}
